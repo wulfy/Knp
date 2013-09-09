@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Knoodle » In surveys we trust</title>
+    <link rel="stylesheet" media="all" href="{{ asset('bundles/knpknoodle/css/style.css')}}" />
+</head>
+<body>
+    <div id="header">
+        <div class="wrap">
+            <h1><a href="{url('Knoodle')}}"><img src="{{ asset('bundles/knpknoodle/images/logo.png')}}" alt="Knoodle" /></a></h1>
+            <h2>In surveys we trust</h2>
+        </div>
+    </div>
+	<div id="content">
+		<div class="wrap">
+		{% block content%}
+		{% endblock %}
+		</div>
+	</div>
+    <div id="footer" class="wrap">
+        <p>Knoodle - In surveys we trust.</p>
+    </div>
+</body>
+</html>

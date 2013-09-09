@@ -1,0 +1,3 @@
+knoodle_survey:
+     pattern:  /{id}
+     defaults: { _controller: KnpKnoodleBundle:Default:surveyShow}

@@ -1,0 +1,28 @@
+{% extends 'KnpKnoodleBundle::layout.html.twig' %}
+
+{% block content %}
+    <div id="survey-show">
+    <h3>{{survey.name}}</h3>
+    <div class="meta">
+        Added by
+        <span class="author">{{survey.author_firstname}} {{survey.author_lastname}}</span>
+        on
+        <span class="date">{{survey.created_at|date('l, j F Y @ H:i')}}</span>
+    </div>
+    <div class="questions">
+
+        {% for question in questions %}
+        <div class="question">
+            <h4>{{question.sentence}}</h4>
+            <ul class="choices">
+                <li class="choice">{{question.first_choice}}</li>
+                <li class="choice">{{question.second_choice}}</li>
+                <li class="choice">{{question.third_choice}}</li>
+            </ul>
+        </div>
+        {%endfor%}
+    </div>
+    <a class="button fleft" href="{{path('Knoodle')}}">&larr; Back to list</a>
+    <a class="button fright" href="answer.php?id={{secured_id}}">Answer this survey &rarr;</a>
+	</div>
+{% endblock %}

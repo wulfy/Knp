@@ -1,0 +1,3 @@
+parameters:
+    database_sqlite : %kernel.root_dir%/database.sqlite
+    pdo_dsn         : sqlite:%database_sqlite%
